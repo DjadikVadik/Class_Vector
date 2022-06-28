@@ -9,24 +9,24 @@ class Vector {
 
 public:
 
-	// конструкторы и деструктор
+	// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹ Рё РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 	Vector();
 	Vector(unsigned int capacity);
 	~Vector();
 
-	// конструктор копирования и переноса
+	// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ Рё РїРµСЂРµРЅРѕСЃР°
 	Vector(const Vector& other);
 	Vector(Vector&& other);
 
-	// перегрузка операторов
+	// РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂРѕРІ
 	bool operator==(const Vector& other);
 	bool operator!=(const Vector& other);
 	const T operator[](int index);
 	Vector& operator=(const Vector& other);
 
-	// методы
+	// РјРµС‚РѕРґС‹
 private:	
-	// метод проверки наличия свободного места в векторе и выдиление новой памяти, если места нет
+	// РјРµС‚РѕРґ РїСЂРѕРІРµСЂРєРё РЅР°Р»РёС‡РёСЏ СЃРІРѕР±РѕРґРЅРѕРіРѕ РјРµСЃС‚Р° РІ РІРµРєС‚РѕСЂРµ Рё РІС‹РґРёР»РµРЅРёРµ РЅРѕРІРѕР№ РїР°РјСЏС‚Рё, РµСЃР»Рё РјРµСЃС‚Р° РЅРµС‚
 	void full_capacity();
 public:
 	int _size();
@@ -49,7 +49,7 @@ public:
 	bool equals(const Vector* other);
 };
 
-#pragma region КОНСТРУКТОРЫ И ДЕСТРУКТОР
+#pragma region В РљРћРќРЎРўР РЈРљРўРћР Р« Р Р”Р•РЎРўР РЈРљРўРћР 
 
 template<typename T>
 Vector<T>::Vector() {
@@ -74,7 +74,7 @@ Vector<T>::~Vector() {
 
 #pragma endregion
 
-#pragma region КОНСТРУКТОР КОПИРОВАНИЯ И ПЕРЕНОСА
+#pragma region В РљРћРќРЎРўР РЈРљРўРћР  РљРћРџРР РћР’РђРќРРЇ Р РџР•Р Р•РќРћРЎРђ
 
 template<typename T>
 Vector<T>::Vector(const Vector& other)
@@ -98,7 +98,7 @@ Vector<T>::Vector(Vector&& other)
 }
 #pragma endregion
 
-#pragma region ПЕРЕГРУЗКА ОПЕРАТОРОВ
+#pragma region РџР•Р Р•Р“Р РЈР—РљРђ РћРџР•Р РђРўРћР РћР’
 
 template<typename T>
 bool Vector<T>::operator==(const Vector& other)
@@ -140,7 +140,7 @@ Vector<T>& Vector<T>::operator=(const Vector& other)
 
 #pragma endregion
 
-#pragma region МЕТОДЫ
+#pragma region РњР•РўРћР”Р«
 
 template<typename T>
 void Vector<T>::full_capacity()
