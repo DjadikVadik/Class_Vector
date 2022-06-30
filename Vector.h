@@ -47,6 +47,7 @@ public:
 	void sort_desc();
 	void shuffle();
 	bool equals(const Vector* other);
+	void clear();
 };
 
 #pragma region  КОНСТРУКТОРЫ И ДЕСТРУКТОР
@@ -307,6 +308,12 @@ template<typename T>
 bool Vector<T>::equals(const Vector* other)
 {
 	return *this == *other;
+}
+
+template<typename T>
+void Vector<T>::clear()
+{
+	size = 0;
 }
 
 #pragma endregion
